@@ -1,1 +1,69 @@
-<h1>HOLA MUNDO</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in</title>
+</head>
+<body>
+    <div class="envoltura">
+        <!--Inicio de sesion-->
+        <form action="" id="inicio_Sesion" method="post">
+            {% csrf_token %}
+            <h3>Iniciar Sesion</h3>
+            <div class="dia-inicio">
+                <!--debe tener elementos que representen el sol y las nubes-->
+            </div>
+            <div class="usuario-label">
+                <label for="">Usuario o Gmail</label>
+                <input type="text">
+            </div>
+            <div class="password">
+                <label for="">Contraseña</label>
+                <input type="password">
+            </div>
+            <div class="btn-ingresar">
+                <input type="button" value="INGRESAR" id="ingresar">
+            </div>
+            <div class="btn-registrar">
+                <p>¿Aun no tienes cuenta? registrate gratis <a href="">AQUI</a></p>
+            </div>
+        </form>
+
+        <!--Registro-->
+        <form action="" method="post" id="registro_usuario">
+            {% csrf_token %}
+            <h3>Crear Usuario</h3>
+            <div class="noche-registro">
+                <!--aqui iran los elementos del registro noche, estrellas y luna-->
+            </div>
+            <div class="correo-registro">
+                <label for="">Correo Electronico</label>
+                <input type="mail"> <!--crear este dato en la base de datos-->
+            </div>
+            <div class="usuario-registro">
+                <label for="">Nombre de Usuario</label>
+                <input type="text">
+            </div>
+            <div class="fecha-nacimiento">
+                <label for="">Fecha de Nacimiento</label>
+                <input type="date">
+            </div>
+            <div class="password-registro">
+                <label for="">Password</label>
+                <input type="text">
+            </div>
+            <div class="confirmar-password">
+                <label for="">Confirmar Password</label>
+                <input type="text">
+            </div>
+            <div class="cancelar-registro">
+                <input type="button" value="REGISTRAR" id="registrar">
+            </div>
+            <div class="btn-registrar-usuario">
+                <input type="button" value="CANCELAR" id="cancelar">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
