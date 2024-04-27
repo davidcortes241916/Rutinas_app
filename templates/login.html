@@ -31,34 +31,35 @@
         </form>
 
         <!--Registro-->
-        <form action="" method="post" id="registro_usuario">
+        <form action="login/" method="post" id="registro_usuario">
             {% csrf_token %}
             <h3>Crear Usuario</h3>
             <div class="noche-registro">
                 <!--aqui iran los elementos del registro noche, estrellas y luna-->
             </div>
+            <!--En los formularios de Django, usar el nameatributo para los campos de entrada es el enfoque estándar y recomendado para enviar datos de formulario, mientras que el uso del idatributo es generalmente para diseñar o manipular JavaScript-->
             <div class="correo-registro">
                 <label for="">Correo Electronico</label>
-                <input type="mail"> <!--crear este dato en la base de datos-->
+                <input type="mail" id="email_usuario" name="email_usuario">
             </div>
             <div class="usuario-registro">
                 <label for="">Nombre de Usuario</label>
-                <input type="text">
+                <input type="text" id="nombre_usuario" name="nombre_usuario">
             </div>
             <div class="fecha-nacimiento">
                 <label for="">Fecha de Nacimiento</label>
-                <input type="date">
+                <input type="date" id="fecha_nacimiento" name="fecha_nacimiento">
             </div>
             <div class="password-registro">
                 <label for="">Password</label>
-                <input type="text">
+                <input type="password" id="password" name="password">
             </div>
             <div class="confirmar-password">
                 <label for="">Confirmar Password</label>
-                <input type="text">
+                <input type="password" id="password2" name="password2">
             </div>
             <div class="cancelar-registro">
-                <input type="button" value="REGISTRAR" id="registrar">
+                <input type="submit" value="REGISTRAR" id="registrar">
             </div>
             <div class="btn-registrar-usuario">
                 <input type="button" value="CANCELAR" id="cancelar">
