@@ -1,0 +1,159 @@
+body{
+    background: #0ea7db;
+    font-family: "Lato", sans-serif;
+}
+
+h1{
+    text-align: center;
+}
+
+.dia h1{
+    color: #0ea7db;
+}
+
+.envoltura{
+    transition: all .5s;
+    min-height: 97vh;
+    display: flex;
+    align-items: center;
+}
+
+.dia, .noche{
+    width: 30%;
+    height: 75vh; 
+    background: rgb(255, 255, 255);
+    min-height: 400px;
+    display: table;
+    position: relative;
+    box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
+}
+
+.dia, .noche{
+    padding-left: 5%;
+    padding-top: 10%;
+    padding-right: 5%;
+}
+
+/*divs*/
+.usuario-label{
+    position: relative;
+    padding-bottom: 20px;
+    padding-left: 20px;
+}
+
+.div-password{
+    position: relative;
+    padding-bottom: 20px;
+    padding-left: 20px;
+}
+
+/*detalles interiores divs*/
+.usuario-label input{
+    width: 300px;
+    height: 30px;
+    border-radius: 8px;
+    font-size: 15px;
+    padding: 0 15px;
+    border: 2px solid #000;
+    background: transparent;
+    color: #000;
+    outline: none; /*hace que no haya interaccion con el input*/
+}
+
+.usuario-label label{
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: #000;
+    font-size: 18px;
+    pointer-events: none;
+    transition: .3s ease;
+}
+
+.usuario-label label{
+    top: 0%;
+    left: 40px;
+    font-size: 15px;
+    padding: 0 2px;
+    background: rgb(255, 255, 255);
+}
+
+.usuario-label input:focus{ /*para que label funciono toco hacerlo desde js*/
+    border: 2px solid #0ea7db;
+    transition: 0.3s ease;
+}
+
+/*password*/
+.div-password input{
+    width: 300px;
+    height: 30px;
+    border-radius: 8px;
+    font-size: 15px;
+    padding: 0 15px;
+    border: 2px solid #000;
+    background: transparent;
+    color: #000;
+    outline: none; /*hace que no haya interaccion con el input*/
+}
+
+.div-password label{
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: #000;
+    font-size: 18px;
+    pointer-events: none;
+    transition: .3s ease;
+}
+
+.div-password label{
+    top: 0%;
+    left: 40px;
+    font-size: 15px;
+    padding: 0 2px;
+    background: rgb(255, 255, 255);
+} 
+
+.div-password input:focus{ /*para que label funciono toco hacerlo desde js*/
+    border: 2px solid #0ea7db;
+    transition: 0.3s ease;
+}
+
+/*boton*/
+.btn-ingresar{
+    padding-left: 30%;
+}
+
+.btn-ingresar input{
+    background: #0ea7db;
+    width: 50%;
+    height: 40%;
+    font-size: 15px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 8px;
+    border: 1px solid #0ea7db;
+    box-shadow: 0 0 10px rgba(0,0,0,.14), 0 6px 8px rgba(0,0,0,.28);
+}
+
+.btn-registrar{
+    text-align: center;
+    font-size: 18px;
+}
+
+.btn-registrar a{
+    text-decoration: none;
+    color: #0ea7db;
+}
+
+.btn-registrar a:hover{
+    color: #0a81a9;
+    font-size: 20px;
+    transition: 0.4s ease;
+}
+
+/*elementos*/
+.dia-inicio{
+    /*esto va luego que el javascript sea configurado*/
+}
