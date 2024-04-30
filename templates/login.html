@@ -3,37 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/style_login.css">
     <title>Sign in</title>
 </head>
 <body>
     <div class="envoltura">
         <!--Inicio de sesion-->
-        <form action="" id="inicio_Sesion" method="post">
-            {% csrf_token %}
-            <h3>Iniciar Sesion</h3>
-            <div class="dia-inicio">
-                <!--debe tener elementos que representen el sol y las nubes-->
-            </div>
-            <div class="usuario-label">
-                <label for="">Usuario o Gmail</label>
-                <input type="text">
-            </div>
-            <div class="password">
-                <label for="">Contraseña</label>
-                <input type="password">
-            </div>
-            <div class="btn-ingresar">
-                <input type="button" value="INGRESAR" id="ingresar">
-            </div>
-            <div class="btn-registrar">
-                <p>¿Aun no tienes cuenta? registrate gratis <a href="">AQUI</a></p>
-            </div>
-        </form>
+        <div class="dia">
+            <form action="" id="inicio_Sesion" method="post">
+                <!--Se debe realizar la funcion de este formulario-->
+                {% csrf_token %}
+                <h1>INICIAR SESION</h1>
+                <div class="dia-inicio">
+                    <span class="nube"></span>
+                    <!--esto va luego de que javascript sea creado-->
+                </div>
+                <div class="usuario-label">
+                    <label for="usuario-label">Usuario o Gmail</label>
+                    <input type="text" id="usuario_email" name="usuario_email" required>
+                </div>
+                <div class="div-password">
+                    <label for="">Contraseña</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="btn-ingresar">
+                    <input type="submit" value="INGRESAR" id="ingresar">
+                </div>
+                <div class="btn-registrar">
+                    <p>¿Aun no tienes cuenta? registrate gratis <a href="">AQUI</a></p>
+                </div>
+            </form>
+        </div>
 
-        <!--Registro-->
+        <div class="noche">
+            <!--Registro-->
         <form action="login/" method="post" id="registro_usuario">
             {% csrf_token %}
-            <h3>Crear Usuario</h3>
+            <h1>CREAR USUARIO</h1>
             <div class="noche-registro">
                 <!--aqui iran los elementos del registro noche, estrellas y luna-->
             </div>
@@ -65,6 +71,7 @@
                 <input type="button" value="CANCELAR" id="cancelar" name="cancelar">
             </div>
         </form>
+        </div>
     </div>
 </body>
 </html>
