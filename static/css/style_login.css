@@ -114,6 +114,7 @@ body {
 .noche{
     width: 25%;
     height: 68vh;
+    left: 30%;
     background: #141414;
     min-height: 400px;
     position: relative;
@@ -192,4 +193,35 @@ body {
 /*elementos*/
 .noche-registro{
     /*esto va luego que el javascript sea configurado*/
+}
+
+.noche{
+  display: none;
+}
+/*---------------------------------------------------*/
+/*--------------------movimiento js-----------------*/
+.movimiento-derecha-dia{
+  animation: movimientoDerecha 0.5s ease forwards;
+}
+
+@keyframes movimientoDerecha{
+  from{
+    transform: translateX(0);
+    opacity: 0;
+  }
+  to{
+    transform: translateX(185.5%);
+    z-index: 0;
+    opacity: 1;
+  }
+}
+
+.registro-animacion{
+  animation: animacionRegistro 0.5s ease forwards;
+}
+
+@keyframes animacionRegistro {
+  from{
+    height: 50px;
+  }
 }
