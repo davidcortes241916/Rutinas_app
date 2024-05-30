@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 class Registro(models.Model):
-    email_usuario= models.CharField(max_length=100, null= False, default="")
+    email_usuario= models.CharField(max_length=100, null= False, default="", unique= True) #arreglar
     nombre_usuario= models.CharField(max_length= 80, null= False)
     fecha_nacimiento= models.DateField(null= False)
     password= models.CharField(max_length=100, null= False)
