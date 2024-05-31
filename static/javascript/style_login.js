@@ -32,7 +32,7 @@ $(document).ready(function() {
       var csrftoken = form.find('input[name="csrfmiddlewaretoken"]').val();
   
       // Validate passwords and required fields
-      if (!validarCamposRequeridos()) {
+      if (!validarCamposRequeridos() || !validarPassword()) {
         return; // Prevent AJAX request if validation fails
       }
   
@@ -80,10 +80,24 @@ $(document).ready(function() {
       return false;
     }
   }
-
   // Return true if all fields are filled
   return true;
   }
 
 
-// pruebajson
+//validar password
+function validarPassword(){
+  const password1 = $('#password1').val();
+  const password2 = $('#password2').val();
+  const minimo= 8;
+
+  if (password1 !== password2){
+    $('#alertaError').text("Las contraseñas no coinciden");
+    return false;
+  }else if(password1 < minimo){
+    $('#alertaError').text("La contraseña es muy corta debe ser de minimo 8 caracteres");
+    return false;
+  }
+
+  return true;
+}
